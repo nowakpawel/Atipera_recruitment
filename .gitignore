@@ -1,0 +1,12 @@
+target/
+.idea
+.project
+.classpath
+*.log
+.gitattributes
+.mvn/
+.secrets.yaml
+*.zip
+HELP.md
+mvnw.cmd
+mvnw
