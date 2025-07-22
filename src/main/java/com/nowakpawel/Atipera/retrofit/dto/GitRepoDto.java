@@ -7,7 +7,6 @@ import lombok.Getter;
 public class GitRepoDto {
     @JsonProperty
     private OwnerDto owner;
-    //TODO: each branch name and last commit
 
     @JsonProperty
     private String name;

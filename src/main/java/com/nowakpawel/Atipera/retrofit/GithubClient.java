@@ -1,7 +1,9 @@
 package com.nowakpawel.Atipera.retrofit;
 
-import com.nowakpawel.Atipera.retrofit.dto.GitRepoDto;
-import com.nowakpawel.Atipera.retrofit.dto.ResponseDto;
+import com.nowakpawel.Atipera.retrofit.dto.BranchDto;
+import com.nowakpawel.Atipera.retrofit.dto.BranchesResponseDto;
+import com.nowakpawel.Atipera.retrofit.dto.RepositoriesResponseDto;
+import org.springframework.web.bind.annotation.PathVariable;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
@@ -10,7 +12,9 @@ import retrofit2.http.Query;
 import java.util.List;
 
 public interface GithubClient {
-//    @GET("/users/{user}/repos")
     @GET("/search/repositories")
-    Call<ResponseDto> repositoriesForUser(@Query("q") String query);
+    Call<RepositoriesResponseDto> repositoriesForUser(@Query("q") String query);
+
+    @GET("/repos/{username}/{reponame}/branches")
+    Call<List<BranchDto>> getBranchesForRepository(@Path("username") String username, @Path("reponame") String reponame);
 }

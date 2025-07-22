@@ -9,8 +9,6 @@ import java.util.List;
 @Component
 @NoArgsConstructor
 @Data
-public class ResponseDto {
-//    private Integer total_count;
-//    private Boolean incomplete_results;
-    private List<GitRepoDto> items;
+public class BranchesResponseDto {
+    List<BranchDto> branchList;
 }
