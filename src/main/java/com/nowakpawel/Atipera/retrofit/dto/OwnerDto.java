@@ -1,8 +1,10 @@
 package com.nowakpawel.Atipera.retrofit.dto;
 
-import lombok.Getter;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
-@Getter
+@Data
+@AllArgsConstructor
 public class OwnerDto {
     private String login;
 }

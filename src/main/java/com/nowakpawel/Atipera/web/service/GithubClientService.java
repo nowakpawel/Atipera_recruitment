@@ -3,7 +3,6 @@ package com.nowakpawel.Atipera.web.service;
 import com.nowakpawel.Atipera.helpers.UserNotFoundException;
 import com.nowakpawel.Atipera.retrofit.GithubClient;
 import com.nowakpawel.Atipera.retrofit.dto.BranchDto;
-import com.nowakpawel.Atipera.retrofit.dto.BranchesResponseDto;
 import com.nowakpawel.Atipera.retrofit.dto.GitRepoDto;
 import com.nowakpawel.Atipera.retrofit.dto.RepositoriesResponseDto;
 import lombok.RequiredArgsConstructor;
@@ -13,7 +12,6 @@ import retrofit2.Response;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
