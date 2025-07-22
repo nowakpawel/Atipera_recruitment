@@ -5,8 +5,8 @@ target/
 *.log
 .gitattributes
 .mvn/
-.secrets.yaml
 *.zip
 HELP.md
 mvnw.cmd
 mvnw
+secrets.yaml
