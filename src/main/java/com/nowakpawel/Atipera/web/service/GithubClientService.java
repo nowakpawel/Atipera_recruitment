@@ -1,5 +1,6 @@
 package com.nowakpawel.Atipera.web.service;
 
+import com.nowakpawel.Atipera.helpers.UserNotFoundException;
 import com.nowakpawel.Atipera.retrofit.GithubClient;
 import com.nowakpawel.Atipera.retrofit.dto.BranchDto;
 import com.nowakpawel.Atipera.retrofit.dto.BranchesResponseDto;
@@ -29,6 +30,8 @@ public class GithubClientService {
                     .filter(i -> i.getFork().equals(Boolean.FALSE)).toList();
             responseDto.setItems(foundRepos);
             return ResponseEntity.ok(responseDto);
+        } else if(response.code() == 422) {
+            throw new UserNotFoundException(String.format("User %s not found", username));
         } else {
             throw new RuntimeException("Unsuccessful response");
         }
@@ -41,6 +44,8 @@ public class GithubClientService {
             List<BranchDto> foundBranches = response.body();
 
             return ResponseEntity.ok(foundBranches);
+        } else if(response.code() == 404) {
+            throw new UserNotFoundException(String.format("User %s not found", username));
         } else {
             throw new RuntimeException("Unsuccessful response");
         }
