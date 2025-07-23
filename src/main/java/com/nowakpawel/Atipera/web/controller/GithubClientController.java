@@ -1,6 +1,5 @@
 package com.nowakpawel.Atipera.web.controller;
 
-import com.nowakpawel.Atipera.retrofit.record.BranchDto;
 import com.nowakpawel.Atipera.retrofit.record.BranchesResponseDto;
 import com.nowakpawel.Atipera.retrofit.record.RepositoriesResponseDto;
 import com.nowakpawel.Atipera.web.service.GithubClientService;
