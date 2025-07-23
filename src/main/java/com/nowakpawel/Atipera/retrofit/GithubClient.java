@@ -1,7 +1,7 @@
 package com.nowakpawel.Atipera.retrofit;
 
-import com.nowakpawel.Atipera.retrofit.dto.BranchDto;
-import com.nowakpawel.Atipera.retrofit.dto.RepositoriesResponseDto;
+import com.nowakpawel.Atipera.retrofit.record.BranchDto;
+import com.nowakpawel.Atipera.retrofit.record.RepositoriesResponseDto;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;

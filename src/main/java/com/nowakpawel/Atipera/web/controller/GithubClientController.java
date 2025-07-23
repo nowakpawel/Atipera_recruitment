@@ -1,7 +1,8 @@
 package com.nowakpawel.Atipera.web.controller;
 
-import com.nowakpawel.Atipera.retrofit.dto.BranchDto;
-import com.nowakpawel.Atipera.retrofit.dto.RepositoriesResponseDto;
+import com.nowakpawel.Atipera.retrofit.record.BranchDto;
+import com.nowakpawel.Atipera.retrofit.record.BranchesResponseDto;
+import com.nowakpawel.Atipera.retrofit.record.RepositoriesResponseDto;
 import com.nowakpawel.Atipera.web.service.GithubClientService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -25,7 +26,7 @@ public class GithubClientController {
     }
 
     @GetMapping("project-branches/{username}/{repository}")
-    public ResponseEntity<List<BranchDto>> getBranchesForRepository(@PathVariable("username") String username, @PathVariable("repository") String repository) throws IOException {
+    public ResponseEntity<BranchesResponseDto> getBranchesForRepository(@PathVariable("username") String username, @PathVariable("repository") String repository) throws IOException {
         return service.getBranchesForRepository(username, repository);
     }
 }

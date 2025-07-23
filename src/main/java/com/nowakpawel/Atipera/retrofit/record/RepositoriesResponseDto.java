@@ -1,4 +1,4 @@
-package com.nowakpawel.Atipera.retrofit.dto;
+package com.nowakpawel.Atipera.retrofit.record;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,6 +9,6 @@ import java.util.List;
 @Component
 @NoArgsConstructor
 @Data
-public class BranchesResponseDto {
-    List<BranchDto> branchList;
+public class RepositoriesResponseDto {
+    private List<GitRepoDto> items;
 }

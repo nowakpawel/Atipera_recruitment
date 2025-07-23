@@ -18,4 +18,7 @@ public class GlobalExceptionHandler {
 
         return new ResponseEntity<>(body, HttpStatus.NOT_FOUND);
     }
+
+    // Possible improvement: I can create another exception for 'repository not found for user.
+    // Currently: when I try to reach repository that is not found for existing use I got an error saying that this user is not found
 }
